@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro | IC</title>
+    <link rel="stylesheet" href="/css/pages/cadastro.css">
+</head>
+<body>
+    <main class="container">
+        <form method="POST" class="frm_register">
+            <a href="/" class="lnk lnk-container"> 
+                <i class="fas fa-chevron-left"></i>
+                <span>Voltar</span>
+            </a>
+            <section clas="container-frm">
+                    <h1>Cadastro</h1>
+                    <div class="input input-primary">
+                        <label for="txt_name" >Nome</label>
+                        <input type="text" required id="txt_name">
+                    </div>
+                    <div class="input input-primary">
+                            <label for="txt_email" >E-mail</label>
+                            <input type="email" id="txt_email">
+                    </div>
+                    <div class="input input-primary">
+                        <label for="txt_cpf" >CPF</label>
+                        <input type="text" id="txt_cpf">
+                    </div>            
+                    <div class="input input-primary">
+                        <label for="txt_instituicao" >Instituição</label>
+                        <input type="text" id="txt_instituicao">
+                    </div>
+                    <div class="input input-primary">
+                            <label for="txt_password" >Senha</label>
+                            <input type="password" id="txt_password">
+                    </div>
+                    <div class="input input-primary">
+                            <label for="txt_password" >Confirme sua senha</label>
+                            <input type="password" id="txt_password">
+                    </div>
+                    <div class="btn-zone">
+                        <input type="submit" class="btn btn-primary" value="Cadastrar">
+                    </div>
+            </section>
+            <figure class="bgDetalhe">
+                <img src="/images/backgrounds/bgDetalhe.png" alt="Imagem de detalhes do formulário">
+            </figure>
+        </form>
+    </main>
+   
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script src="/js/input.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard | IC</title>
+    <link rel="stylesheet" href="/css/pages/dashCadastro.css">
+
+</head>
+
+<body>
+    <div class="bar-purple">
+
+    </div>
+    <main class="container">
+        <header class="w-header ">
+            <ul>
+                <li class="selectItem">
+                    <a href="#">
+                        <i class="fas fa-user-cog"></i>
+                        <span>Administradores</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-user-cog"></i>
+                        <span>Avaliadores</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-user-cog"></i>
+                        <span>Orientadores</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-user-cog"></i>
+                        <span>Autores</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-user-cog"></i>
+                        <span>Projetos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-user-cog"></i>
+                        <span>Projetos própios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-user-cog"></i>
+                        <span>Período de inscrição</span>
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <div class="container-table">
+            <div class="header-table">
+                <h2>Cadastrar
+                    <span> | Administradores</span>
+                </h2>
+            </div>
+            <form method="POST" class="frm_cadastrar">
+                <div class="input input-primary">
+                    <label for="txt_name">Nome</label>
+                    <input type="text" required id="txt_name">
+                </div>
+                <div class="input input-primary">
+                    <label for="txt_area">Área</label>
+                    <input type="text" required id="txt_area">
+                </div>
+                <div class="input input-primary">
+                    <label for="txt_cpf">CPF</label>
+                    <input type="text" required id="txt_cpf">
+                </div>
+                <div class="input input-primary">
+                    <label for="txt_nivel">Nível</label>
+                    <input type="text" required id="txt_nivel">
+                </div>
+                <div class="input input-primary">
+                    <label for="txt_email">E-mail</label>
+                    <input type="text" required id="txt_email">
+                </div>
+                <div class="input input-primary">
+                    <label for="txt_latters">Latters</label>
+                    <input type="text" required id="txt_latters">
+                </div>
+
+                <div class="input input-primary">
+                    <label for="txt_cellphone">Celular</label>
+                    <input type="text" required id="txt_cellphone">
+                </div>
+                <div class="input input-primary">
+                    <label for="txt_password">Senha</label>
+                    <input type="text" required id="txt_password">
+                </div>
+                <div class="input input-primary">
+                    <label for="txt_conf_password">Confirmação Senha</label>
+                    <input type="text" required id="txt_conf_password">
+                </div>
+                <div class="btns-zone">
+                    <input type="submit" value="CANCELAR" class="btn btn-primary">
+                    <input type="submit" value="CADASTRAR" class="btn btn-primary">
+                </div>
+            </form>
+
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="/js/input.js"></script>
+</body>
+
+</html>

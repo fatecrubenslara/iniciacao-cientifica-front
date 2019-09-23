@@ -1,0 +1,17 @@
+{
+  "name": "exemplo-browser-sync",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido para a submissão e avaliação de artigos cientificios",
+  "main": "app.js",
+  "scripts": {
+    "start" : "gulp"
+  },
+  "author": "Equipe Web",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.23.6",
+    "express": "^4.16.3",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1"
+  }
+}
