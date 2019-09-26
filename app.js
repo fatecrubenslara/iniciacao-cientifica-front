@@ -271,12 +271,112 @@ app.use(express.static('pages'))
 		})
 	})
 
+	app.get('/projetos/avaliar', (req, res) => {
+		// const url = 'https://iniciacaoback.herokuapp.com/projetos/avaliar'
+		const url = 'http://localhost/iniciacao-cientifica-reboot/projetos/avaliar'
+		const dados = {
+		    "ressalva": "ndjsnj dsds dsdsds dsds dsnjdsnj",
+		    "data": "2019-09-18",
+		    "id_avaliador": "75",
+		    "id_projeto": "28",
+		    "id_status": "2"
+		}
+
+		fetch(url, {
+				method: 'GET',
+				headers: {'Content-Type':'application/json'}
+		})
+		.then(async response => {
+			const r = await response.json()
+			res.send(r)
+		})
+	})
+
 // =================autores==========================
 	app.get('/autores', (req, res) => {
 		const url = 'https://iniciacaoback.herokuapp.com/autores'
 		fetch(url, {
 		    method: 'GET',
+		    headers: {'Content-Type':'application/json'}
+		})
+		.then(async response => {
+			const r = await response.json()
+			res.send(r)
+		})
+	})
+
+	app.get('/autores/cadastrar', (req, res) => {
+		// const url = 'https://iniciacaoback.herokuapp.com/autores/cadastrar'
+		const url = 'http://localhost/iniciacao-cientifica-reboot/autores/cadastrar'
+		const dados = {
+        cpf: "11558187685",
+        nome: "Nome do Autor",
+        email: "email@email.com",
+        curso: "Sistemas para Internet",
+        lattes: "https://iniciacaoback.herokuapp.com/autores/cadastrar",
+        id_orientador: "60"
+    }
+		fetch(url, {
+		    method: 'POST',
 		    headers: {'Content-Type':'application/json'},
+				body: JSON.stringify(dados)
+		})
+		.then(async response => {
+			const r = await response.json()
+			res.send(r)
+		})
+	})
+
+	app.get('/autores/editar', (req, res) => {
+		// const url = 'https://iniciacaoback.herokuapp.com/autores/editar'
+		const url = 'http://localhost/iniciacao-cientifica-reboot/autores/editar'
+		const dados = {
+        cpf: "11558187685",
+        nome: "Ciclano",
+        email: "ciclano@email.com",
+        curso: "Sistemas para Internet",
+        lattes: "https://iniciacaoback.herokuapp.com/autores/cadastrar",
+        id_orientador: "60",
+				id_autor: "45"
+    }
+		fetch(url, {
+		    method: 'POST',
+		    headers: {'Content-Type':'application/json'},
+				body: JSON.stringify(dados)
+		})
+		.then(async response => {
+			const r = await response.json()
+			res.send(r)
+		})
+	})
+
+	app.get('/autores/deletar', (req, res) => {
+		// const url = 'https://iniciacaoback.herokuapp.com/autores/deletar'
+		const url = 'http://localhost/iniciacao-cientifica-reboot/autores/deletar'
+		const dados = {
+				id: "45"
+    }
+		fetch(url, {
+		    method: 'POST',
+		    headers: {'Content-Type':'application/json'},
+				body: JSON.stringify(dados)
+		})
+		.then(async response => {
+			const r = await response.json()
+			res.send(r)
+		})
+	})
+
+	app.get('/autores/aluno', (req, res) => {
+		// const url = 'https://iniciacaoback.herokuapp.com/autores/aluno'
+		const url = 'http://localhost/iniciacao-cientifica-reboot/autores/aluno'
+		const dados = {
+				cpf: "11558187685"
+    }
+		fetch(url, {
+		    method: 'POST',
+		    headers: {'Content-Type':'application/json'},
+				body: JSON.stringify(dados)
 		})
 		.then(async response => {
 			const r = await response.json()
@@ -291,7 +391,7 @@ app.get('/calendario', (req, res) => {
 	const url = 'http://localhost/iniciacao-cientifica-reboot/calendario'
 	fetch(url, {
 			method: 'GET',
-			headers: {'Content-Type':'application/json'},
+			headers: {'Content-Type':'application/json'}
 	})
 	.then(async response => {
 		const r = await response.json()
@@ -304,13 +404,33 @@ app.get('/calendario/eventos', (req, res) => {
 	const url = 'http://localhost/iniciacao-cientifica-reboot/calendario/eventos'
 	fetch(url, {
 			method: 'GET',
-			headers: {'Content-Type':'application/json'},
+			headers: {'Content-Type':'application/json'}
 	})
 	.then(async response => {
 		const r = await response.json()
 		res.send(r)
 	})
 })
+
+app.get('/calendario/novo-agendamento', (req, res) => {
+	// const url = 'https://iniciacaoback.herokuapp.com/calendario/novo-agendamento'
+	const url = 'http://localhost/iniciacao-cientifica-reboot/calendario/novo-agendamento'
+	const dados = {
+				data_inicio: "2019-09-20",
+				data_final: "2019-10-20",
+				id_evento: "3"
+			}
+	fetch(url, {
+			method: 'POST',
+			headers: {'Content-Type':'application/json'},
+			body: JSON.stringify(dados)
+	})
+	.then(async response => {
+		const r = await response.json()
+		res.send(r)
+	})
+})
+
 
 const PORT =  process.env.PORT || 8081
 app.listen(PORT, () => {
