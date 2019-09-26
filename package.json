@@ -3,10 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+<<<<<<< HEAD
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
+=======
+    "start": "gulp"
+>>>>>>> d17215483b7064a98c2f58a9fb583012224b01ee
   },
   "dependencies": {
+<<<<<<< HEAD
     "core-js": "^2.6.5",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
@@ -22,5 +27,12 @@
     "sass": "^1.18.0",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.6.10"
+=======
+    "browser-sync": "^2.23.6",
+    "express": "^4.17.1",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "node-fetch": "^2.6.0"
+>>>>>>> d17215483b7064a98c2f58a9fb583012224b01ee
   }
 }
