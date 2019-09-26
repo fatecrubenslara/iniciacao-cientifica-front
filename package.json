@@ -1,17 +1,26 @@
 {
-  "name": "exemplo-browser-sync",
-  "version": "1.0.0",
-  "description": "Projeto desenvolvido para a submissão e avaliação de artigos cientificios",
-  "main": "app.js",
+  "name": "iniciacao-cientifica-front",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start" : "gulp"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
   },
-  "author": "Equipe Web",
-  "license": "ISC",
   "dependencies": {
-    "browser-sync": "^2.23.6",
-    "express": "^4.16.3",
-    "gulp": "^3.9.1",
-    "gulp-nodemon": "^2.2.1"
+    "core-js": "^2.6.5",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "v-money": "^0.8.1",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.3",
+    "vue-the-mask": "^0.11.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.11.0",
+    "@vue/cli-service": "^3.11.0",
+    "sass": "^1.18.0",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.6.10"
   }
 }
