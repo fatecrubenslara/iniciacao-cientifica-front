@@ -278,13 +278,53 @@ app.use(express.static('pages'))
 		    "ressalva": "ndjsnj dsds dsdsds dsds dsnjdsnj",
 		    "data": "2019-09-18",
 		    "id_avaliador": "75",
-		    "id_projeto": "28",
+		    "id_projeto": "25",
 		    "id_status": "2"
 		}
 
 		fetch(url, {
 				method: 'GET',
 				headers: {'Content-Type':'application/json'}
+		})
+		.then(async response => {
+			const r = await response.json()
+			res.send(r)
+		})
+	})
+
+	app.get('/projetos/avaliadores', (req, res) => {
+		// const url = 'https://iniciacaoback.herokuapp.com/projetos/avaliadores'
+		const url = 'http://localhost/iniciacao-cientifica-reboot/projetos/avaliadores'
+		const dados = {
+        ids_avaliador: [60, 75],
+        id_projeto: "25"
+    }
+
+		fetch(url, {
+				method: 'post',
+				headers: {'Content-Type':'application/json'},
+				body: JOSON.stringify(dados)
+		})
+		.then(async response => {
+			const r = await response.json()
+			res.send(r)
+		})
+	})
+
+	app.get('/projetos/enviar-relatorio', (req, res) => {
+		// const url = 'https://iniciacaoback.herokuapp.com/projetos/enviar-relatorio'
+		const url = 'http://localhost/iniciacao-cientifica-reboot/projetos/enviar-relatorio'
+		const dados = {
+        url: "http://localhost/iniciacao-cientifica-reboot/projetos/enviar-relatorio",
+        data: "2019-09-25",
+        categoria: "parcial",
+        id_projeto: "25"
+    }
+
+		fetch(url, {
+				method: 'post',
+				headers: {'Content-Type':'application/json'},
+				body: JSON.stringify(dados)
 		})
 		.then(async response => {
 			const r = await response.json()
